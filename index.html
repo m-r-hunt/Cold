@@ -15,49 +15,42 @@
 <tw-storydata name="Cold" startnode="6" creator="Twine" creator-version="2.0.10" ifid="F842845D-DFEE-4517-8CCC-C64DFE856714" format="Harlowe" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css"></style><script role="script" id="twine-user-script" type="text/twine-javascript">var num_jumpers = 0
 
 var time_cold = 0
-var max_cold = 20</script><tw-passagedata pid="1" name="Start" tags="" position="951,469">(if: $time_cold &lt;= $max_cold)[
-(set: $time_cold to $time_cold+1)
-(if: $num_jumpers &gt; 0)[
-You are wearing $num_jumpers jumper(if: $num_jumpers &gt; 1)[(print:&quot;s&quot;)].
-]
-(if: $num_jumpers &lt; 5)[
-It&#39;s cold. You&#39;re cold. The boiler in your flat is broken.
+var max_cold = 20</script><tw-passagedata pid="1" name="Start" tags="" position="948,469">(if: $time_cold &lt;= $max_cold)[(set: $time_cold to $time_cold+1)(if: $num_jumpers &gt; 0)[You are wearing $num_jumpers jumper(if: $num_jumpers &gt; 1)[(print:&quot;s&quot;)].
+
+](if: $num_jumpers &lt; 5)[It&#39;s (text-colour: blue)[cold]. You&#39;re (text-colour: blue)[cold]. The boiler in your flat is broken.
 
 [[Put on a jumper]]
 
-[[Phone the landlord]]
-](else:)[
-It&#39;s cold. You&#39;re feel about right temperature. The boiler in your flat is broken.
+[[Phone the landlord]]](else:)[It&#39;s (text-colour: blue)[cold]. You&#39;re fairly (text-colour: red)[warm]. The boiler in your flat is broken.
 
 [[Put on a jumper-&gt;Stuck]]
 
-[[Phone the landlord-&gt;Stuck]]
-]
-](else:)[
-[[You feel really cold now-&gt;Hypothermia]]
-]</tw-passagedata>
-<tw-passagedata pid="2" name="Put on a jumper" tags="" position="951,620">(set: $num_jumpers to $num_jumpers+1)
-
-You put on a jumper. You feel slightly warmer.
+[[Phone the landlord-&gt;Stuck]]]](else:)[[[You feel really cold now-&gt;Hypothermia]]]</tw-passagedata>
+<tw-passagedata pid="2" name="Put on a jumper" tags="" position="1032,648">(set: $num_jumpers to $num_jumpers+1)You put on a jumper. You feel slightly warmer.
 
 [[Back-&gt;Start]]
 </tw-passagedata>
-<tw-passagedata pid="3" name="Phone the landlord" tags="" position="1101,620">(set: $time_cold to $time_cold+1)
-It&#39;s getting late, and the engineer hasn&#39;t arrived to look at the boiler. You phone the landlord.
+<tw-passagedata pid="3" name="Phone the landlord" tags="" position="1217,468">(set: $time_cold to $time_cold+1)It&#39;s getting late, and the engineer hasn&#39;t arrived to look at the boiler. You phone the landlord.
 
 He answers. The engineer is stuck fixing someone else&#39;s boiler. He should be able to make it first thing tomorrow.
 
 [[Sleep until tomorrow, shivering in the cold-&gt;Start]]</tw-passagedata>
-<tw-passagedata pid="4" name="Stuck" tags="" position="826,622">The jumpers you are wearing, whilst comfortably warm, restrict your movement. You can&#39;t move. You can&#39;t breathe.
+<tw-passagedata pid="4" name="Stuck" tags="" position="826.0002,650">The jumpers you are wearing, whilst comfortably (text-colour: red)[warm], restrict your movement. You can&#39;t move. You can&#39;t breathe.
 
-Your body is discovered a month later by your landlord, who has come looking for the rent.</tw-passagedata>
-<tw-passagedata pid="5" name="Hypothermia" tags="" position="826,497">You are having trouble staying awake and your mind keeps wandering. For some reason you&#39;ve got to get out of all these clothes.
+Your body is discovered a month later by your landlord, who has come looking for the rent.
 
-Your body, frozen and naked, is found by a neighbour, who wants to know why the boiler still hasn&#39;t been fixed.</tw-passagedata>
-<tw-passagedata pid="6" name="Init" tags="" position="965,302">(set: $num_jumpers to 0)
-(set: $time_cold to 0)
-(set: $max_cold to 20)
-[[It&#39;s November-&gt;Start]]</tw-passagedata>
+[[whiteout]] </tw-passagedata>
+<tw-passagedata pid="5" name="Hypothermia" tags="" position="699,462">You are having trouble staying awake and your mind keeps wandering. For some reason you&#39;ve got to get out of all these clothes.
+
+Your body, frozen and naked, is found by a neighbour, who wants to know why the boiler still hasn&#39;t been fixed.
+
+[[whiteout]]</tw-passagedata>
+<tw-passagedata pid="6" name="Init" tags="" position="965,302">(set: $num_jumpers to 0)(set: $time_cold to 0)(set: $max_cold to 20)[[It&#39;s November-&gt;Start]]</tw-passagedata>
+<tw-passagedata pid="7" name="whiteout" tags="" position="700,648.3333333333334">The End.
+
+This was &quot;(text-colour: blue)[Cold]&quot; by Max Hunt.
+
+Created with &lt;a href=&quot;http://twinery.org/&quot;&gt;Twine&lt;a&gt; (&lt;a href=&quot;http://twinery.org/wiki/twine_licenses&quot;&gt;liscensing information&lt;/a&gt;) and hosted on &lt;a href=&quot;https://pages.github.com/&quot;&gt;Github Pages&lt;/a&gt;.</tw-passagedata>
 </tw-storydata>
 
 
